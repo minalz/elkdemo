@@ -63,7 +63,7 @@
     <!--日志导出到 Logstash-->
     <appender name="stash"
               class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>10.0.3.85:9250</destination>
+        <destination>localhost:9250</destination>
         <!-- encoder必须配置,有多种可选 -->
         <encoder charset="UTF-8"
                  class="net.logstash.logback.encoder.LogstashEncoder" >
