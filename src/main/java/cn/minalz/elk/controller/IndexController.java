@@ -12,13 +12,12 @@ public class IndexController {
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @GetMapping("/index")
-    public Object index() {
-        for (int i = 0; i < 10; i++) {
-            logger.debug("===elkdemo测试: 此时i=" + i);
-            logger.info("===elkdemo: 此时i=" + i);
-            logger.warn("===elkdemo: 此时i=" + i);
-            logger.error("===elkdemo: 此时i=" + i);
-        }
+    public Object index(String marking) {
+
+        logger.debug("===elkdemo测试: 此时marking=" + marking);
+        logger.info("===elkdemo: 此时marking" + marking);
+        logger.warn("===elkdemo: 此时marking" + marking);
+        logger.error("===elkdemo: 此时marking" + marking);
 
         return "success";
     }
