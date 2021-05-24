@@ -15,9 +15,9 @@ public class IndexController {
     public Object index(String marking) {
 
         logger.debug("===elkdemo测试: 此时marking=" + marking);
-        logger.info("===elkdemo: 此时marking" + marking);
-        logger.warn("===elkdemo: 此时marking" + marking);
-        logger.error("===elkdemo: 此时marking" + marking);
+        logger.info("===elkdemo: 此时marking=" + marking);
+        logger.warn("===elkdemo: 此时marking=" + marking);
+        logger.error("===elkdemo: 此时marking=" + marking);
 
         return "success";
     }

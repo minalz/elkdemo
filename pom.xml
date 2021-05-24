@@ -44,7 +44,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- elk lostash -->
+        <!-- elk logstash -->
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
