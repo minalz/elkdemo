@@ -11,7 +11,7 @@
     <groupId>cn.minalz.elk</groupId>
     <artifactId>elkdemo</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>study-demo</name>
+    <name>elkdemo</name>
     <description>Just for my own multiple technology learning</description>
     <properties>
         <java.version>1.8</java.version>
@@ -70,5 +70,39 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.jdbc.url>jdbc:postgresql://172.16.55.190:9002/sonar</sonar.jdbc.url>
+                <sonar.jdbc.driver>org.postgresql.Driver</sonar.jdbc.driver>
+                <sonar.jdbc.username>sonar</sonar.jdbc.username>
+                <sonar.jdbc.password>sonar</sonar.jdbc.password>
+                <sonar.host.url>http://10.0.3.85:9001</sonar.host.url>
+                <sonar.inclusions>src/main/**</sonar.inclusions>
+            </properties>
+        </profile>
+        <!--<profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.jdbc.url>jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8&amp;useConfigs=maxPerformance&amp;rewriteBatchedStatements=true</sonar.jdbc.url>
+                <sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
+                <sonar.jdbc.username>root</sonar.jdbc.username>
+                <sonar.jdbc.password>root</sonar.jdbc.password>
+                <sonar.host.url>http://localhost:9000</sonar.host.url>
+                <sonar.inclusions>src/main/java/com/demo/**</sonar.inclusions>
+                <sonar.exclusions>src/main/java/com/demo/sap1/**,
+                    src/main/java/com/demo/sap2/**       </sonar.exclusions>
+            </properties>
+        </profile>-->
+    </profiles>
+
 
 </project>

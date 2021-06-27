@@ -14,6 +14,8 @@ public class IndexController {
     @GetMapping("/index")
     public Object index(String marking) {
 
+        int a = 2/0;
+
         logger.debug("===elkdemo测试: 此时marking=" + marking);
         logger.info("===elkdemo: 此时marking=" + marking);
         logger.warn("===elkdemo: 此时marking=" + marking);
