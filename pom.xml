@@ -51,6 +51,17 @@
             <version>5.2</version>
         </dependency>
 
+        <!-- 添加监控 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- 借助 Micrometer 对接 Prometheus 监控系统 -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -78,7 +89,7 @@
     </build>
 
     <profiles>
-        <profile>
+        <!--<profile>
             <id>sonar</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
@@ -92,7 +103,7 @@
                 <sonar.inclusions>src/main/**</sonar.inclusions>
                 <sonar.scm.disabled>true</sonar.scm.disabled>
             </properties>
-        </profile>
+        </profile>-->
         <!--<profile>
             <id>sonar</id>
             <activation>
